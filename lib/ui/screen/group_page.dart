@@ -1,3 +1,4 @@
+import 'package:edul/model/group.dart';
 import 'package:edul/service/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -5,7 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../viewmodel/providers.dart';
 import '../widget/grid_item_tile.dart';
 
-var groupStreamProvider = StreamProvider((ref) {
+var groupStreamProvider = StreamProvider<List<Group>>((ref) {
   final viewModel = ref.watch(groupViewModelProvider);
   return viewModel.getStream();
 });
@@ -30,7 +31,7 @@ class GroupPage extends ConsumerWidget {
             },
           );
         },
-        error: (err, stack) => const CircularProgressIndicator(),
+        error: (err, stack) => throw err,
         loading: () => const CircularProgressIndicator());
   }
 }

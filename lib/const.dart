@@ -7,5 +7,5 @@ class FirebasePath {
 
   static String itemPath(String listId, String itemPath) => '/list/$listId/$itemPath';
 
-  static String groupsPath(String uid) => '/user/$uid/groups';
+  static String groupsPath(String uid) => '/users/$uid/groups';
 }

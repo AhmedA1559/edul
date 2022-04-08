@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:edul/ui/screen/group_page.dart';
 import 'package:edul/ui/screen/item_page.dart';
 import 'package:edul/ui/widget/item_list_widget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -27,6 +28,8 @@ class MyApp extends ConsumerWidget {
       title: 'Edul',
 
       themeMode: ThemeMode.system,
-      home: ItemPage(listId: '1e39f8c7-669e-4566-bca2-9618f65006ce',)));
+      home: //ItemPage(listId: '1e39f8c7-669e-4566-bca2-9618f65006ce',)
+        GroupPage())
+        ,);
   }
 }

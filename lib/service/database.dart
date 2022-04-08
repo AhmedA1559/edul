@@ -31,6 +31,7 @@ class Database {
   }
 
   Stream<DatabaseEvent> groupStream() {
+    print(FirebasePath.groupsPath(_uid));
     return _firebaseDatabase.ref(FirebasePath.groupsPath(_uid)).onValue;
   }
 }
